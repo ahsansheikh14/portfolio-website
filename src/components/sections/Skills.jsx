@@ -38,7 +38,7 @@ export default function Skills() {
                       scale: 1.05,
                       boxShadow: "0 0 20px rgba(149, 209, 209, 0.3)",
                     }}
-                    className="px-3 py-1.5 text-xs md:text-sm rounded-lg bg-primary/20 border border-primary/30 text-white/90 hover:border-accent/50 hover:text-accent transition-colors cursor-default"
+                    className="px-3 py-1.5 text-xs md:text-sm rounded-lg skill-tag hover:border-accent/50 hover:text-accent transition-colors cursor-default"
                   >
                     {skill}
                   </motion.span>

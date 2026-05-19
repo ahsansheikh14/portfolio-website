@@ -18,8 +18,7 @@ Open [http://localhost:5173](http://localhost:5173)
    - GitHub username & URLs
    - LinkedIn URL
    - Email address
-3. **GitHub section** — Update repository names in `src/components/sections/GitHub.jsx`.
-4. **Project links** — Add GitHub/live URLs in `src/data/projects.js`.
+3. **Project links** — Add GitHub/live URLs in `src/data/projects.js`.
 
 ## Build
 

@@ -4,7 +4,7 @@ const variants = {
   primary:
     "bg-primary text-white border border-primary/50 hover:bg-primary-light shadow-[0_0_30px_rgba(12,82,82,0.5)]",
   secondary:
-    "glass text-white hover:border-accent/40 hover:shadow-[0_0_25px_rgba(149,209,209,0.2)]",
+    "glass text-heading hover:border-accent/40 hover:shadow-[0_0_25px_rgba(149,209,209,0.2)]",
   accent:
     "bg-accent/15 text-accent border border-accent/30 hover:bg-accent/25",
 };

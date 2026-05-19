@@ -1,10 +1,10 @@
 export const timeline = [
   {
-    year: "2024 — Present",
-    title: "Software Engineering Student",
-    org: "University",
+    year: "2023 — Present",
+    title: "B.S. Software Engineering",
+    org: "Bahria University",
     description:
-      "Pursuing Software Engineering with focus on full-stack development, DSA, and software design principles.",
+      "Pursuing Software Engineering since 2023 with focus on full-stack development, DSA, and software design principles.",
     tags: ["Coursework", "DSA", "OOP"],
   },
   {
@@ -34,16 +34,9 @@ export const timeline = [
   {
     year: "Ongoing",
     title: "DSA Learning Journey",
-    org: "LeetCode & Practice",
+    org: "Practice & Coursework",
     description:
       "Strengthening problem-solving with data structures, algorithms, stacks, queues, linked lists, and trees.",
     tags: ["DSA", "Java", "C++"],
   },
-];
-
-export const stats = [
-  { label: "Projects Completed", value: 8, suffix: "+" },
-  { label: "Technologies", value: 20, suffix: "+" },
-  { label: "Hackathons", value: 3, suffix: "+" },
-  { label: "GitHub Repositories", value: 15, suffix: "+" },
 ];

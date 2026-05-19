@@ -38,9 +38,9 @@ export default function Experience() {
                 }`}
               >
                 <span className="font-mono text-xs text-accent">{item.year}</span>
-                <h3 className="text-xl font-bold text-white mt-1">{item.title}</h3>
+                <h3 className="text-xl font-bold text-heading mt-1">{item.title}</h3>
                 <p className="text-sm text-primary-light font-medium mt-0.5">{item.org}</p>
-                <p className="mt-3 text-muted text-sm leading-relaxed">{item.description}</p>
+                <p className="mt-3 text-body text-sm leading-relaxed">{item.description}</p>
                 <motion.div
                   className={`flex flex-wrap gap-2 mt-4 ${index % 2 === 0 ? "md:justify-end" : ""}`}
                 >

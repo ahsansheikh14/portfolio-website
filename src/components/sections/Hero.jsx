@@ -68,8 +68,8 @@ export default function Hero() {
               transition={{ delay: 0.5 }}
               className="mt-4 h-10 md:h-12"
             >
-              <h2 className="text-2xl md:text-3xl font-semibold text-white/90">
-                <span className="text-muted">I'm a </span>
+              <h2 className="text-2xl md:text-3xl font-semibold text-heading">
+                <span className="text-body">I'm a </span>
                 <span className="text-accent font-mono">
                   {typedRole}
                   <span className="animate-pulse">|</span>
@@ -81,7 +81,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.65 }}
-              className="mt-6 text-lg text-muted max-w-xl leading-relaxed"
+              className="mt-6 text-lg text-body max-w-xl leading-relaxed"
             >
               {siteConfig.tagline}
             </motion.p>
@@ -134,7 +134,7 @@ export default function Hero() {
                     AS
                   </motion.div>
                   <p className="mt-4 font-mono text-sm text-accent">MERN Developer</p>
-                  <p className="text-xs text-muted mt-1">Software Engineering Student</p>
+                  <p className="text-xs text-body mt-1">Bahria University · SE since 2023</p>
                 </div>
               </div>
               <motion.div

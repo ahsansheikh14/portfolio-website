@@ -1,35 +1,5 @@
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import SectionHeading from "../ui/SectionHeading";
-import { stats } from "../../data/experience";
-import { useCounter } from "../../hooks/useCounter";
-
-function StatCard({ label, value, suffix, index }) {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
-  const count = useCounter(value, 2000, inView);
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: index * 0.1, duration: 0.5 }}
-      className="glass rounded-2xl p-6 text-center hover:border-accent/30 transition-all duration-300 group"
-    >
-      <motion.p
-        className="text-4xl md:text-5xl font-bold gradient-text"
-        whileHover={{ scale: 1.05 }}
-      >
-        {count}
-        {suffix}
-      </motion.p>
-      <p className="mt-2 text-sm text-muted group-hover:text-accent transition-colors">
-        {label}
-      </p>
-    </motion.div>
-  );
-}
 
 export default function About() {
   return (
@@ -41,18 +11,19 @@ export default function About() {
           subtitle="Passionate about building impactful software"
         />
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <motion.div className="grid lg:grid-cols-2 gap-12 items-start">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="space-y-5 text-muted leading-relaxed text-base md:text-lg"
+            className="space-y-5 text-body leading-relaxed text-base md:text-lg"
           >
             <p>
               Hello! I'm <span className="text-accent font-medium">Ahsan Sheikh</span>, a
-              Software Engineering student and passionate{" "}
-              <span className="text-white">Full Stack MERN Developer</span> based in Pakistan.
+              Software Engineering student at{" "}
+              <span className="text-highlight font-medium">Bahria University</span> (since 2023) and a passionate{" "}
+              <span className="text-highlight font-medium">Full Stack MERN Developer</span> based in Pakistan.
             </p>
             <p>
               I specialize in building scalable web applications and AI-powered systems that
@@ -82,7 +53,7 @@ export default function About() {
             <h3 className="font-mono text-accent text-sm mb-6">Quick Facts</h3>
             <ul className="space-y-4">
               {[
-                "Software Engineering Student",
+                "Software Engineering @ Bahria University (2023)",
                 "MERN Stack Developer",
                 "AI & Recommendation Systems",
                 "Hackathon Competitor",
@@ -95,7 +66,7 @@ export default function About() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.08 }}
-                  className="flex items-center gap-3 text-muted"
+                  className="flex items-center gap-3 text-body"
                 >
                   <span className="w-2 h-2 rounded-full bg-accent shrink-0" />
                   {item}
@@ -103,13 +74,7 @@ export default function About() {
               ))}
             </ul>
           </motion.div>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-16">
-          {stats.map((stat, i) => (
-            <StatCard key={stat.label} {...stat} index={i} />
-          ))}
-        </div>
+        </motion.div>
       </motion.div>
     </section>
   );

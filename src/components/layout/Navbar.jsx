@@ -21,7 +21,7 @@ export default function Navbar({ theme, onToggleTheme }) {
   }, [open]);
 
   const navClass = scrolled
-    ? "glass shadow-lg shadow-black/20 py-3"
+    ? "glass shadow-lg py-3"
     : "bg-transparent py-5";
 
   return (
@@ -32,7 +32,7 @@ export default function Navbar({ theme, onToggleTheme }) {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${navClass}`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        <a href="#home" className="font-bold text-lg tracking-tight">
+        <a href="#home" className="font-bold text-lg tracking-tight text-heading">
           <span className="text-accent font-mono">&lt;</span>
           AS
           <span className="text-accent font-mono">/&gt;</span>
@@ -43,7 +43,7 @@ export default function Navbar({ theme, onToggleTheme }) {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm text-muted hover:text-accent transition-colors relative group"
+                className="text-sm text-body hover:text-accent transition-colors relative group"
               >
                 {link.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-px bg-accent group-hover:w-full transition-all duration-300" />
@@ -72,7 +72,7 @@ export default function Navbar({ theme, onToggleTheme }) {
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
           >
-            {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {open ? <X className="w-5 h-5 text-heading" /> : <Menu className="w-5 h-5 text-heading" />}
           </button>
         </motion.div>
       </nav>
@@ -83,7 +83,7 @@ export default function Navbar({ theme, onToggleTheme }) {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glass border-t border-white/10 mt-2"
+            className="md:hidden glass border-t border-theme mt-2"
           >
             <ul className="flex flex-col p-6 gap-4">
               {siteConfig.navLinks.map((link, i) => (
@@ -96,7 +96,7 @@ export default function Navbar({ theme, onToggleTheme }) {
                   <a
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className="text-lg text-white/90 hover:text-accent"
+                    className="text-lg text-heading hover:text-accent"
                   >
                     {link.label}
                   </a>
