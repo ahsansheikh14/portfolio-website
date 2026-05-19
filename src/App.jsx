@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { useTheme } from "./hooks/useTheme";
 import LoadingScreen from "./components/layout/LoadingScreen";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
@@ -14,7 +13,6 @@ import Contact from "./components/sections/Contact";
 
 function App() {
   const [loading, setLoading] = useState(true);
-  const { theme, toggle } = useTheme();
 
   return (
     <>
@@ -31,7 +29,7 @@ function App() {
           transition={{ duration: 0.5 }}
         >
           <GradientBlobs />
-          <Navbar theme={theme} onToggleTheme={toggle} />
+          <Navbar />
           <main>
             <Hero />
             <About />

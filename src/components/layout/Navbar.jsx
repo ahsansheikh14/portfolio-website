@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Sun, Moon } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { siteConfig } from "../../config/site";
 
-export default function Navbar({ theme, onToggleTheme }) {
+export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -52,29 +52,14 @@ export default function Navbar({ theme, onToggleTheme }) {
           ))}
         </ul>
 
-        <motion.div className="flex items-center gap-3">
-          <button
-            type="button"
-            onClick={onToggleTheme}
-            aria-label="Toggle theme"
-            className="p-2 rounded-lg glass hover:border-accent/30 transition-colors"
-          >
-            {theme === "dark" ? (
-              <Sun className="w-5 h-5 text-accent" />
-            ) : (
-              <Moon className="w-5 h-5 text-primary" />
-            )}
-          </button>
-
-          <button
-            type="button"
-            className="md:hidden p-2 rounded-lg glass"
-            onClick={() => setOpen(!open)}
-            aria-label="Toggle menu"
-          >
-            {open ? <X className="w-5 h-5 text-heading" /> : <Menu className="w-5 h-5 text-heading" />}
-          </button>
-        </motion.div>
+        <button
+          type="button"
+          className="md:hidden p-2 rounded-lg glass"
+          onClick={() => setOpen(!open)}
+          aria-label="Toggle menu"
+        >
+          {open ? <X className="w-5 h-5 text-heading" /> : <Menu className="w-5 h-5 text-heading" />}
+        </button>
       </nav>
 
       <AnimatePresence>
