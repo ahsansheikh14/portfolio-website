@@ -8,8 +8,8 @@ export const siteConfig = {
   githubUsername: "ahsansheikh14",
   ContactNumber: "03185355252",
   location: "Pakistan",
-  cvPath: "/Ahsan_Sheikh_Resume.pdf",
-  cvFileName: "Ahsan_Sheikh_Resume.pdf",
+  cvPath: "/Sheikh Ahsan Shafique Resume.pdf",
+  cvFileName: "Sheikh Ahsan Shafique Resume.pdf",
   roles: [
     "Software Engineer",
     "MERN Stack Developer",
